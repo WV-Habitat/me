@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Talk template</title>
+    <meta charset="utf-8" />
+    <script src="assets/header-attrs-2.25/header-attrs.js"></script>
+    <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="assets/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="assets/tile-view-0.2.6/tile-view.js"></script>
+    <link href="assets/animate.css-3.7.2/animate.xaringan.css" rel="stylesheet" />
+    <link href="assets/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link href="assets/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a76635f382f34afd84f91c6e29f69f1f","expires":1}</script>
+    <script src="assets/himalaya-1.1.0/himalaya.js"></script>
+    <script src="assets/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="assets/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="assets/editable-0.2.6/editable.js"></script>
+    <link href="assets/panelset-0.3.0/panelset.css" rel="stylesheet" />
+    <script src="assets/panelset-0.3.0/panelset.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <!--hauisdhah087hbdu1h0781gd10gdasdgh0172gd1d8h0781dgiqubsdoqusgd9712gdqiudh917gdqiuhxb0182gd12gs9712g-->
+    <link rel="stylesheet" href="conf/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="conf/css/fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+class: middle, title-slide
+
+&lt;!-- top logo (comment to remove or edit on `conf/css/style.css:23`) --&gt;
+&lt;div class="lab-logo"&gt;&lt;/div&gt;
+&lt;!-- &lt;div class="uni-logo"&gt;&lt;/div&gt; --&gt;
+
+# Who is Willian Vieira?
+
+&lt;hr width="65%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+## and what has he been doing?
+
+### Willian Vieira, .small[Analyst]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+[&lt;i class="fa fa-github fa-lg" style="color:#e7e8e2"&gt;&lt;/i&gt; WV-Habitat/me](https://github.com/WV-Habitat/me)
+
+[&lt;i class="fa fa-twitter fa-lg" style="color:#e7e8e2"&gt;&lt;/i&gt; @WillVieira90](https://twitter.com/willvieira90)
+
+---
+
+# Outline
+
+- My thesis project
+
+- The ECCC project
+
+- Side projects
+
+- Future projects
+
+---
+class: middle, center, inverse
+
+# My PhD thesis
+
+&lt;hr width="100%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+---
+
+.center[.font140[**How can we better predict tree species distribution?**]]
+
+&lt;br&gt;
+
+- Species Distribution Models (SDM) are not appropriated for trees
+
+- But we can use *theory* to create **mechanistic models**
+
+- What are the drivers of forest dynamics shaping tree distribution?
+
+- Mathematical and statistical models to assess the effect of climate, competition, and forest management
+
+---
+# Chapter 1: State Transition Model
+
+.center[![:scale 55%](https://raw.githubusercontent.com/willvieira/PhD/master/chapter1/img/fig1.png)]
+
+- Derived from the metapopulation theory
+- **B**oreal, **T**emperate, **M**ixed, and **R**egeneration ~ MAT + MAP
+- Extension to include forest management practices
+- Simple model -&gt; analytically tractable -&gt; transient dynamics
+- Matrix algebra, Jacobian approximation
+- [STM R package](https://willvieira.github.io/STManaged/index.html); [Shiny App](https://github.com/willvieira/shiny_STM-managed)
+
+.cite[Model from Vissault et al. [2020](https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.13978)]
+
+---
+# Chapter 2 &amp; 3: Integral Projection Model
+
+.center[![](images\ipm3.png)]
+
+- Demographic models for 31 tree species from eastern North America
+- `\(\lambda\)` ~ [Growh + mortality + recruit] ~ climate + competition
+- Non-linear hierachical Bayesian models
+- `Stan`: statistical programming language derived from `C++`
+- High performance computing (HPC)
+- C.2: Random forest for sensitivity analysis
+- C.3: Scale integration - from individual performance to the metapopulation
+- [Lab notebook](https://willvieira.github.io/book_forest-demography-IPM/)
+
+---
+class: middle, center, inverse
+
+# The ECCC project
+&lt;hr width="100%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+## Sampling design for monitoring boreal birds in Quebec
+
+---
+# BMS project
+
+.pull-right[![](https://willvieira.github.io/sampling_BMS/studyArea_files/figure-html/fig-ecoregion-1.png)]
+
+
+- National effort to develop a protocol to sample boreal birds
+- Adapt and implement national design for the Quebec region
+- Spatially stratified sampling approach weighted by:
+  - Habitat
+  - Cost
+  - Legacy sites
+- [Report](https://willvieira.github.io/sampling_BMS/)
+
+
+---
+# BMS project
+
+.font130[R&amp;D: A new approach to account for legacy sites]
+
+.center[![:scale 60%](https://willvieira.github.io/sampling_BMS/legacy_files/figure-html/fig-sampleSize-example2-1.png)]
+
+---
+# BMS project
+
+.font130[R&amp;D: A new approach to account for legacy sites]
+
+.center[![:scale 60%](https://willvieira.github.io/sampling_BMS/legacy_files/figure-html/fig-ecosExample-1.png)]
+
+---
+class: middle, center, inverse
+
+# Side projects
+
+&lt;hr width="100%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+.font140[*From learning useless programming languages to automating unnecessary tasks*]
+
+---
+# Side projects
+
+.font120[Reporting and templates]
+- [Manuscript template](https://github.com/willvieira/ms_STM-managed) (using markdown, LaTeX, Pandoc, Lua and yaml)
+- [Presentation template](https://github.com/willvieira/talkTemplate) (this presentation, some CSS and JavaScript)
+- Books (Lab notebook, ECCC report)
+
+.font120[Task automation]
+- Make (reproducibility of manuscripts)
+- Crontab ([Kijiji scraper R package](https://github.com/willvieira/KijijiScraper))
+- GitHub Actions to automatically:
+  - Test and build R packages
+  - Reproduce analysis
+  - Deploy reports and websites
+
+---
+class: middle, center, inverse
+
+# Future projects
+
+&lt;hr width="100%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+.font140[*Or what I would like to explore*]
+
+---
+# Future projects
+
+.font120[Modeling]
+- Statistical models (spatiotemporal autocorrelation, time series)
+- Machine learning beyond random forest
+
+.font120[Development tools]
+- Modularization (Packages, unity test, deployment, versioning, code review)
+- Containerization (Docker)
+- Data engineering
+- Cloud computing
+
+---
+class: middle, center, inverse
+
+# Cloud-based geospatial technologies
+
+&lt;hr width="100%" align="left" size="0.3" color="#FFC800"&gt;&lt;/hr&gt;
+
+---
+# Cloud-based geospatial technologies
+
+.font120[**Cloud Optimized GeoTIFF (COG)**]
+
+It is based on two complementary frameworks:
+1. Optimal GeoTIFF storage (store and organize each pixel information)
+  - Tiling
+  - Overviews
+2. HTTP GET range requests (extract only a portion of the GeoTIFF file)
+
+--
+
+.font120[**STAC catalog**]
+- 
+- 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="conf/js/gifffer.min.js"></script>
+<script src="conf/js/style-macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
