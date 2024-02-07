@@ -12,13 +12,13 @@
   .lab-logo {
     content: "";
     position: absolute;
-    top:    15px;
-    left:   35px;
+    top:    30px;
+    left:   53px;
     height: 73px;
-    width:  220px;
+    width:  139px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(../../images/IE_logo_renversé.png);
+    background-image: url(../../images/Habitat_logo_long_sloganUP_yellow.png);
    }
    .uni-logo {
     content: "";
