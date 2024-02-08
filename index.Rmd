@@ -106,18 +106,18 @@ class: middle, center, inverse
 .cite[Model from Vissault et al. [2020](https://onlinelibrary.wiley.com/doi/abs/10.1111/jbi.13978)]
 
 ---
-# Chapter 2 & 3: Integral Projection Model
+# Chapters 2 & 3: Integral Projection Model
 
+<br>
 .center[![](images\ipm3.png)]
 
 - Demographic models for 31 tree species from eastern North America
 - $\lambda$ ~ [Growh + mortality + recruit] ~ climate + competition
-- Non-linear hierachical Bayesian models
-- `Stan`: statistical programming language derived from `C++`
-- High performance computing (HPC)
+- Non-linear hierarchical Bayesian models
+- Stan: statistical programming language derived from C++
+- High-performance computing (HPC)
 - C.2: Random forest for sensitivity analysis
 - C.3: Scale integration - from individual performance to the metapopulation
-- [Lab notebook](https://willvieira.github.io/book_forest-demography-IPM/)
 
 ---
 class: middle, center, inverse
@@ -130,6 +130,7 @@ class: middle, center, inverse
 ---
 # BMS project
 
+<br>
 .pull-right[![](https://willvieira.github.io/sampling_BMS/studyArea_files/figure-html/fig-ecoregion-1.png)]
 
 
@@ -168,6 +169,8 @@ class: middle, center, inverse
 ---
 # Side projects
 
+<br>
+
 .font120[Reporting and templates]
 - [Manuscript template](https://github.com/willvieira/ms_STM-managed) (using markdown, LaTeX, Pandoc, Lua and yaml)
 - [Presentation template](https://github.com/willvieira/talkTemplate) (this presentation, some CSS and JavaScript)
@@ -193,6 +196,8 @@ class: middle, center, inverse
 ---
 # Future projects
 
+<br>
+
 .font120[Modeling]
 - Statistical models (spatiotemporal autocorrelation, time series)
 - Machine learning beyond random forest
@@ -200,7 +205,7 @@ class: middle, center, inverse
 .font120[Development tools]
 - Modularization (Packages, unity test, deployment, versioning, code review)
 - Containerization (Docker)
-- Data engineering
+- Data Engineering
 - Cloud computing
 
 ---
@@ -213,16 +218,53 @@ class: middle, center, inverse
 ---
 # Cloud-based geospatial technologies
 
+<br>
+
 .font120[**Cloud Optimized GeoTIFF (COG)**]
 
 It is based on two complementary frameworks:
 1. Optimal GeoTIFF storage (store and organize each pixel information)
   - Tiling
   - Overviews
-2. HTTP GET range requests (extract only a portion of the GeoTIFF file)
+2. HTTP GET range requests
+  - extract only a portion of the GeoTIFF file
+  - Not mandatory but already built into cloud services (Google, Azure)
+  - Ranges are determined by external metadata
+
+---
+# Cloud-based geospatial technologies
+
+<br>
+
+.font120[**Spatial-Temporal Asset Catalog (STAC)**]
+- A common language to describe geospatial information
+- metadata standard (JSON)
+- Structured metadata repository describing
+  - **What** it is
+  - **Where** data is located
+  - **How** it can be used
+-  Hierarchically structured into items, collections, and catalogs
+
+Example with the Landsat images:
+- RED band of an image is an asset
+- All color bands of an image is an item
+- All images together are a collection
+
+---
+# Cloud-based geospatial technologies
+
+<br>
+
+.font120[**Why should we move towards STAC?**]
+- Once linked to STAC, we have access to any [new] open data effortless
+- Catalog is centralized, providing easy searchability of new data sets
+- Inclusion of new data is easy
+- Community-based metadata extensions for specific problems
 
 --
 
-.font120[**STAC catalog**]
-- 
-- 
+.font120[**Constrants**]
+- It comes with high implementation costs (especially if we become data providers)
+- Less useful if we are interested in only a few spatial datasets
+
+---
